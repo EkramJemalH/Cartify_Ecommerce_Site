@@ -1,0 +1,28 @@
+.footer-container {
+    background-color: #2c2c2c; /* Dark background */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 60px; /* Spacing between icons */
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: white; /* Default icon color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Brand-specific hover colors */
+.icon-fb:hover { color: #1877F2; transform: translateY(-3px); }
+.icon-wa:hover { color: #25D366; transform: translateY(-3px); }
+.icon-ig:hover { color: #E4405F; transform: translateY(-3px); }
