@@ -7,6 +7,12 @@ body {
     min-height: 100vh;
 
 }
+.logo{
+    border:1px solid white;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
 
 .container {
     display: flex;
@@ -15,7 +21,7 @@ body {
     width: 100%;
     padding: 10px 20px;
     box-sizing: border-box;
-    background-color: #D9D9D9;
+    background-color: #aea9a9;
     border: 2px solid #D9D9D9;
     height:50px;
 }

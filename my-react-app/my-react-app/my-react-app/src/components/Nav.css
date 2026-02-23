@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+nav ul{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: end;
+}
+nav ul li{
+    list-style: none;
+    padding:12px;
+}

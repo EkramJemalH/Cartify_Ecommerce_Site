@@ -1,0 +1,49 @@
+.popular-products {
+  padding: 2rem;
+  text-align: center;
+  background-color: #D0BEBE;
+}
+
+.popular-products h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: black;
+}
+
+/* Stack items vertically */
+.products-container {
+  display: flex;
+  flex-direction: row; /* vertical stack */
+  align-items: center;    /* center the cards horizontally */
+  gap: 1.5rem;            /* space between cards */
+}
+
+.product-card {
+  width: 250px;             /* card width */
+  border: 1px solid #eee;   /* light border */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;       /* center content inside card */
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.product-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.product-price {
+  color: #ff6f61;
+  font-weight: bold;
+  margin: 0;
+}
