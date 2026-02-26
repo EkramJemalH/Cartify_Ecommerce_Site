@@ -1,49 +1,39 @@
 .signup-container {
-  display: flex;
+   display: flex;
+  width: 100%;
   height: 100vh;
   font-family: Arial, sans-serif;
+  color: black;
+  background-color:white;
+  overflow:hidden;
 }
 
 /* Left side */
 .signup-left {
+  position: relative; /* required for absolutely positioned circles */
   flex: 1;
-  background-color: #f9f5f0; /* light cream */
-  position: relative;
+  height:100vh;
+  background-color: #7b2c2c; 
+  color: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  overflow: hidden;
+   border-radius: 0 50% 50% 0;
+
 }
 
 .signup-left h1 {
   z-index: 1;
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 4.5rem;
+  color: #9d9494ff;
 }
 
-.circle.large {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-color: #ffe4c4;
-  border-radius: 50%;
-  top: -50px;
-  left: -50px;
-  z-index: 0;
-}
 
-.circle.small {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-color: #ffd9b3;
-  border-radius: 50%;
-  bottom: -30px;
-  right: -30px;
-  z-index: 0;
-}
+
 
 /* Right side */
 .signup-right {
@@ -63,8 +53,9 @@
 
 .signup-form h2 {
   margin-bottom: 1.5rem;
-  color: #333;
-  text-align: center;
+  color: #0d0d0dff;
+  font-weight:900;
+  font-size:2rem;
 }
 
 .signup-form input {
@@ -73,11 +64,12 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
+  background-color:rgb(207, 207, 207);
 }
 
 .signup-btn {
   padding: 0.8rem;
-  background-color: #f7a072;
+  background-color: #7b2c2c;
   color: white;
   border: none;
   border-radius: 8px;
@@ -87,21 +79,22 @@
 }
 
 .signup-btn:hover {
-  background-color: #e68a50;
+  background-color: #5e2222;
 }
 
 .login-text {
   text-align: center;
   margin-top: 1rem;
   font-size: 0.9rem;
+  color:black;
 }
 
 .login-text .login {
-  color: #f7a072;
+  color: #7b2c2c;
   text-decoration: none;
   font-weight: bold;
+  border:none;
 }
-
-.login-text .login:hover {
-  text-decoration: underline;
+.login:hover{
+  color: #7b2c2c;
 }

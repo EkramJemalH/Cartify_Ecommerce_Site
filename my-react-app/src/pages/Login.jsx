@@ -15,8 +15,6 @@ function Login() {
     <div className="login-container">
       {/* Left side */}
       <div className="login-left">
-  <div className="circle large"></div>
-  <div className="circle small"></div>
   <h1>Hello <br /> welcome back</h1>
 </div>
 

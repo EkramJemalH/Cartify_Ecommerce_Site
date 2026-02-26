@@ -5,6 +5,7 @@
   height: 100vh;
   font-family: Arial, sans-serif;
   color: black;
+  background-color:white;
 }
 
 /* Left side: background color with text */
@@ -17,31 +18,14 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  overflow: hidden; /* hide circles that go out of bounds */
+  overflow: hidden; 
+  border-radius: 0 50% 50% 0;/* hide circles that go out of bounds */
 }
 
-/* Circles */
-.circle {
-  position: absolute;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1); /* transparent white */
-}
 
-.circle.large {
-  width: 250px;
-  height: 250px;
-  top: -50px;
-  left: -50px;
-}
 
-.circle.small {
-  width: 100px;
-  height: 100px;
-  bottom: -30px;
-  left: 20px;
-}
 /* Right side: white form */
 .login-right {
   flex: 1;
@@ -120,4 +104,7 @@
   color: #7b2c2c;
   font-weight: bold;
   cursor: pointer;
+}
+.signup:hover{
+   color: #ca5e5eff;
 }
