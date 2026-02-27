@@ -7,6 +7,7 @@ import category2 from "../assets/cosmotic.avif";
 import category3 from "../assets/book.png";
 import "./Home.css";
 import { FaTruck, FaTrophy, FaLock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function Home() {
     // Home.jsx
     return (

@@ -1,0 +1,61 @@
+.product-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.product-tabs button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: none;
+}
+
+.product-tabs .active-tab {
+  border-bottom: 3px solid #7b2c2c;
+  font-weight: bold;
+}
+
+.tab-content {
+  margin-top: 1rem;
+}
+
+.reviews .review {
+  border-top: 1px solid #eee;
+  padding: 0.5rem 0;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.related-products {
+  margin-top: 3rem;
+}
+
+.related-products h2 {
+  margin-bottom: 1rem;
+}
+
+.related-grid {
+  display: flex;
+  gap: 1rem;
+}
+
+.related-card {
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.related-card:hover {
+  transform: scale(1.05);
+}
+
+.related-card img {
+  width: 100px;
+  object-fit: contain;
+}

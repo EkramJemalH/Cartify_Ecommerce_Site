@@ -37,7 +37,10 @@ body {
     align-items: center;
     gap: 12px;
 }
-
+.nav-right nav ul li link.active{
+    color: #812F2F;
+    text-decoration: underline;
+}
 .nav-right nav ul {
     display: flex;
     list-style: none;

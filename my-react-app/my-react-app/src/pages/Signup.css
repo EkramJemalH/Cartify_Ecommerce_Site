@@ -1,0 +1,100 @@
+.signup-container {
+   display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: black;
+  background-color:white;
+  overflow:hidden;
+}
+
+/* Left side */
+.signup-left {
+  position: relative; /* required for absolutely positioned circles */
+  flex: 1;
+  height:100vh;
+  background-color: #7b2c2c; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  overflow: hidden;
+   border-radius: 0 50% 50% 0;
+
+}
+
+.signup-left h1 {
+  z-index: 1;
+  font-size: 4.5rem;
+  color: #9d9494ff;
+}
+
+
+
+
+/* Right side */
+.signup-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.signup-form {
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form h2 {
+  margin-bottom: 1.5rem;
+  color: #0d0d0dff;
+  font-weight:900;
+  font-size:2rem;
+}
+
+.signup-form input {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color:rgb(207, 207, 207);
+}
+
+.signup-btn {
+  padding: 0.8rem;
+  background-color: #7b2c2c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.signup-btn:hover {
+  background-color: #5e2222;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color:black;
+}
+
+.login-text .login {
+  color: #7b2c2c;
+  text-decoration: none;
+  font-weight: bold;
+  border:none;
+}
+.login:hover{
+  color: #7b2c2c;
+}
