@@ -9,20 +9,26 @@
   gap: 1.5rem;
 }
 
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .product-card {
   background: #f0e4e4;
   padding: 1rem;
-  border:2px solid #f0e4e4;
+  border: 2px solid #f0e4e4;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   transition: 0.3s ease;
   text-align: center;
-  color:black;
+  color: black;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
 }
+
 
 .product-card img {
   width: 100%;
@@ -38,6 +44,7 @@
 .rating {
   color: gold;
 }
+
 .categories-row {
   display: flex;
   gap: 1rem;

@@ -1,7 +1,7 @@
 import "./Nav.css";
 import { FiSearch } from "react-icons/fi";
 import logo from "../assets/cart.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function Nav(){
     return(
         <div className="container">
@@ -19,8 +19,8 @@ function Nav(){
         <div className="nav-right">
             <nav>
                 <ul>
-                    <li><Link to="/Home">Home</Link></li>
-                    <li><Link to="/shop">Shop</Link></li>
+                    <li><NavLink to="/Home">Home</NavLink></li>
+                    <li><NavLink to="/shop">Shop</NavLink></li>
                    <li className="dropdown">
                             <a href="#" className="dropbtn">Cart ▾</a>
                             <div className="dropdown-content">
@@ -29,7 +29,7 @@ function Nav(){
                             </div>
                         </li>
                     <li>
-                        <Link to="/login"><button className="login">Login</button></Link></li>
+                        <NavLink to="/login"><button className="login">Login</button></NavLink></li>
                     <li><a href="#">Profile</a></li>
                 </ul>
             </nav>

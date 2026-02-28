@@ -5,9 +5,9 @@ import hero from "../assets/hero.webp";
 import category1 from "../assets/electronic.png";
 import category2 from "../assets/cosmotic.avif";
 import category3 from "../assets/book.png";
-import "./Home.css";
-import { FaTruck, FaTrophy, FaLock } from "react-icons/fa";
+import Shop from "./Shop";
 import { Link } from "react-router-dom";
+import "./Home.css";
 function Home() {
     // Home.jsx
     return (
@@ -18,7 +18,7 @@ function Home() {
                     <div className="left-hero">
                     <h1>Everything You Need, All in One Place</h1>
                     <p>Shop unique items and enjoy fast delivery</p>
-                    <button className="shop-now">Shop Now</button>
+                   <Link to="/shop"><button className="shop-now">Shop Now</button></Link>
                     </div>
                     <div className="right-hero">
                         <img src={hero} alt="hero" className="hero-img"/>

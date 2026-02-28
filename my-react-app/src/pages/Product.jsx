@@ -39,24 +39,28 @@ function Product() {
       <Nav />
 
       <main className="product-container">
-        <div className="product-left">
-          <img src={product.image} alt={product.title} />
-        </div>
-
-        <div className="product-right">
-          <h1>{product.title}</h1>
-          <p className="price">{product.price} ETB</p>
-          <p>⭐ {product.rating?.rate}</p>
-
-          {/* Quantity Selector */}
-          <div className="quantity-selector">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
+        <div className="product-top-section">
+          <div className="product-left">
+            <img src={product.image} alt={product.title} />
           </div>
 
-          <button className="add-cart">Add to Cart</button>
+          <div className="product-right">
+            <h1>{product.title}</h1>
+            <p className="price">{product.price} ETB</p>
+            <p>⭐ {product.rating?.rate}</p>
 
+            {/* Quantity Selector */}
+            <div className="quantity-selector">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+
+            <button className="add-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div className="product-bottom-section">
           {/* Tabs */}
           <div className="product-tabs">
             <button
@@ -106,7 +110,7 @@ function Product() {
             <div className="related-products">
               <h2>You Might Also Like This</h2>
               <div className="related-grid">
-                {relatedProducts.slice(0, 3).map((rel) => (
+                {relatedProducts.slice(0, 4).map((rel) => (
                   <Link to={`/product/${rel.id}`} key={rel.id} className="related-card">
                     <img src={rel.image} alt={rel.title} />
                     <p>{rel.title}</p>
