@@ -19,12 +19,12 @@ function Nav(){
         <div className="nav-right">
             <nav>
                 <ul>
-                    <li><NavLink to="/Home">Home</NavLink></li>
+                    <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/shop">Shop</NavLink></li>
                    <li className="dropdown">
                             <a href="#" className="dropbtn">Cart ▾</a>
                             <div className="dropdown-content">
-                                <a href="#">Cart</a>
+                                <NavLink to="/cart">Cart</NavLink>
                                 <a href="#">Wishlist</a>
                             </div>
                         </li>

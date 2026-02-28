@@ -5,18 +5,21 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Shop from "./pages/Shop";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Home page */}
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
         {/* Login page */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/shop" element={<Shop />}/>
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
 

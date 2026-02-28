@@ -1,0 +1,147 @@
+/* Main Container */
+.cart-container {
+  padding: 3rem 5%;
+  min-height: 70vh;
+}
+
+.cart-container h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Empty Cart */
+.empty-cart {
+  font-size: 1.2rem;
+  color: gray;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Cart Items */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Single Item */
+.cart-item {
+  display: flex;
+  gap: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+
+/* Product Image */
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Details */
+.cart-details {
+  flex: 1;
+}
+
+.cart-details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cart-details p {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.quantity-controls button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: #7b2c2c;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.quantity-controls button:hover {
+  background-color: #5e2020;
+}
+
+.quantity-controls span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.remove-btn:hover {
+  text-decoration: underline;
+}
+
+/* Cart Summary */
+.cart-summary {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cart-summary h2 {
+  font-size: 1.5rem;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #7b2c2c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #5e2020;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-summary {
+    flex-direction: column;
+    text-align: center;
+  }
+}
