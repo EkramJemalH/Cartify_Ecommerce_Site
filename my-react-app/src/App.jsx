@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
+import Wishlist from "./pages/Wishlist";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/shop" element={<Shop />}/>
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
     </BrowserRouter>
 

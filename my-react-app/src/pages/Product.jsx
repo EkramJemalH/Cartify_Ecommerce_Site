@@ -1,7 +1,8 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { WishlistContext } from "../context/WishlistContextValue"; // ✅ ADD THIS
 import "./Product.css";
 
 function Product() {
@@ -13,6 +14,13 @@ function Product() {
   const [activeTab, setActiveTab] = useState("description");
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [quantity, setQuantity] = useState(1);
+
+  // ✅ Wishlist
+  const { wishlist, toggleWishlist } = useContext(WishlistContext);
+
+  const isInWishlist = wishlist.some(
+    (item) => item.id === product?.id
+  );
 
   // Fetch product + related products
   useEffect(() => {
@@ -26,13 +34,11 @@ function Product() {
         const data = await res.json();
         setProduct(data);
 
-        // Fetch related products (same category)
         const relatedRes = await fetch(
           `https://fakestoreapi.com/products/category/${data.category}`
         );
         const relatedData = await relatedRes.json();
 
-        // Exclude current product
         const filtered = relatedData.filter(
           (p) => p.id !== data.id
         );
@@ -53,7 +59,7 @@ function Product() {
     setQuantity(1);
   }, [id]);
 
-  // Add to cart function
+  // Add to cart
   const handleAddToCart = () => {
     const existingCart =
       JSON.parse(localStorage.getItem("cart")) || [];
@@ -69,7 +75,6 @@ function Product() {
     }
 
     localStorage.setItem("cart", JSON.stringify(existingCart));
-
     navigate("/cart");
   };
 
@@ -113,7 +118,15 @@ function Product() {
             <p className="price">{product.price} ETB</p>
             <p>⭐ {product.rating?.rate}</p>
 
-            {/* Quantity Selector */}
+            {/* ✅ Wishlist Button */}
+            <button
+              className="wishlist-btn"
+              onClick={() => toggleWishlist(product)}
+            >
+              {isInWishlist ? "❤️ Remove from Wishlist" : "🤍 Add to Wishlist"}
+            </button>
+
+            {/* Quantity */}
             <div className="quantity-selector">
               <button
                 onClick={() =>
@@ -125,11 +138,7 @@ function Product() {
 
               <span>{quantity}</span>
 
-              <button
-                onClick={() =>
-                  setQuantity(quantity + 1)
-                }
-              >
+              <button onClick={() => setQuantity(quantity + 1)}>
                 +
               </button>
             </div>
@@ -174,7 +183,7 @@ function Product() {
             </button>
           </div>
 
-          {/* Tab Content */}
+          {/* Content */}
           <div className="tab-content">
             {activeTab === "description" && (
               <p>{product.description}</p>
@@ -200,8 +209,7 @@ function Product() {
                         ⭐ {product.rating?.rate}
                       </p>
                       <p>
-                        This is a review comment
-                        example.
+                        This is a review comment example.
                       </p>
                       <p className="review-date">
                         Feb 25, 2026
@@ -215,12 +223,10 @@ function Product() {
             )}
           </div>
 
-          {/* Related Products */}
+          {/* Related */}
           {relatedProducts.length > 0 && (
             <div className="related-products">
-              <h2>
-                You Might Also Like This
-              </h2>
+              <h2>You Might Also Like This</h2>
 
               <div className="related-grid">
                 {relatedProducts

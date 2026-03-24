@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom"; 
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { WishlistContext } from "../context/WishlistContextValue"; // ✅ ADD
 import "./Shop.css";
 
 function Shop() {
@@ -9,6 +10,9 @@ function Shop() {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
   const [loading, setLoading] = useState(true);
+
+  // ✅ Wishlist
+  const { wishlist, toggleWishlist } = useContext(WishlistContext);
 
   // Fetch categories
   useEffect(() => {
@@ -70,20 +74,38 @@ function Shop() {
           <h2>Loading...</h2>
         ) : (
           <div className="products-grid">
-            {products.map((product) => (
-              <Link
-                to={`/product/${product.id}`} // ✅ Dynamic route
-                key={product.id}
-                className="product-link"
-              >
-                <div className="product-card">
-                  <img src={product.image} alt={product.title} />
-                  <h3>{product.title}</h3>
-                  <p className="price">{product.price} ETB</p>
-                  <p className="rating">⭐ {product.rating?.rate}</p>
-                </div>
-              </Link>
-            ))}
+            {products.map((product) => {
+              const isInWishlist = wishlist.some(
+                (item) => item.id === product.id
+              );
+
+              return (
+                <Link
+                  to={`/product/${product.id}`}
+                  key={product.id}
+                  className="product-link"
+                >
+                  <div className="product-card">
+                    
+                    {/* ✅ Wishlist Button */}
+                    <button
+                      className="wishlist-icon"
+                      onClick={(e) => {
+                        e.preventDefault(); // ❗ prevent navigation
+                        toggleWishlist(product);
+                      }}
+                    >
+                      {isInWishlist ? "❤️" : "🤍"}
+                    </button>
+
+                    <img src={product.image} alt={product.title} />
+                    <h3>{product.title}</h3>
+                    <p className="price">{product.price} ETB</p>
+                    <p className="rating">⭐ {product.rating?.rate}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         )}
       </main>
