@@ -29,7 +29,6 @@ function Nav() {
               <div className="dropdown-content">
                 <NavLink to="/cart">Cart</NavLink>
 
-                {/* ✅ FIXED */}
                 <NavLink to="/wishlist">Wishlist</NavLink>
 
               </div>
@@ -41,7 +40,7 @@ function Nav() {
               </NavLink>
             </li>
 
-            <li><a href="#">Profile</a></li>
+            <li><NavLink to="/profile">Profile</NavLink></li>
           </ul>
         </nav>
       </div>
