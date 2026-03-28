@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 
 function Profile() {
-  // Mock user data
   const [user] = useState({
     name: "John Doe",
     email: "johndoe@example.com",
@@ -18,23 +17,48 @@ function Profile() {
 
       <main className="profile-container">
         <div className="profile-card">
-          <img src={user.avatar} alt="User Avatar" className="avatar" />
-          <h2>{user.name}</h2>
-          <p>{user.email}</p>
 
+          {/* Header */}
+          <div className="profile-header">
+            <img src={user.avatar} alt="User Avatar" />
+            <div>
+              <h2>{user.name}</h2>
+              <p>{user.email}</p>
+            </div>
+          </div>
+
+          {/* Stats / Info */}
+          <div className="profile-stats">
+            <div>
+              <h3>12</h3>
+              <p>Orders</p>
+            </div>
+            <div>
+              <h3>5</h3>
+              <p>Wishlist</p>
+            </div>
+            <div>
+              <h3>3</h3>
+              <p>Reviews</p>
+            </div>
+          </div>
+
+          {/* Links */}
           <div className="profile-links">
             <Link to="/orders" className="profile-link">
-              🛒 Orders
+              🛒 My Orders
             </Link>
             <Link to="/wishlist" className="profile-link">
               ❤️ Wishlist
             </Link>
             <Link to="/settings" className="profile-link">
-              ⚙️ Settings
+              ⚙️ Account Settings
             </Link>
           </div>
 
+          {/* Logout */}
           <button className="logout-btn">Logout</button>
+
         </div>
       </main>
 

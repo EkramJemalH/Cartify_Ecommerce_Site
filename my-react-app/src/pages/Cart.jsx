@@ -22,10 +22,7 @@ function Cart() {
     );
 
     setCartItems(updatedCart);
-    localStorage.setItem(
-      "cart",
-      JSON.stringify(updatedCart)
-    );
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   // Decrement quantity
@@ -37,10 +34,7 @@ function Cart() {
     );
 
     setCartItems(updatedCart);
-    localStorage.setItem(
-      "cart",
-      JSON.stringify(updatedCart)
-    );
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   // Remove item
@@ -50,10 +44,7 @@ function Cart() {
     );
 
     setCartItems(updatedCart);
-    localStorage.setItem(
-      "cart",
-      JSON.stringify(updatedCart)
-    );
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   // Calculate total price
@@ -78,50 +69,40 @@ function Cart() {
           <>
             <div className="cart-items">
               {cartItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="cart-item"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                  />
+                <div key={item.id} className="cart-item">
 
-                  <div className="cart-details">
-                    <h3>{item.title}</h3>
-                    <p>{item.price} ETB</p>
+                  {/* 🔥 REMOVE BUTTON (TOP RIGHT CORNER) */}
+                  <button
+                    className="remove-btn"
+                    onClick={() => removeItem(item.id)}
+                  >
+                    Remove
+                  </button>
 
-                    <div className="quantity-controls">
-                      <button
-                        onClick={() =>
-                          decrement(item.id)
-                        }
-                      >
-                        -
-                      </button>
+                  <div className="cart-item-top">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                    />
 
-                      <span>
-                        {item.quantity}
-                      </span>
+                    <div className="cart-details">
+                      <h3>{item.title}</h3>
+                      <p>{item.price} ETB</p>
 
-                      <button
-                        onClick={() =>
-                          increment(item.id)
-                        }
-                      >
-                        +
-                      </button>
+                      <div className="quantity-controls">
+                        <button onClick={() => decrement(item.id)}>
+                          -
+                        </button>
+
+                        <span>{item.quantity}</span>
+
+                        <button onClick={() => increment(item.id)}>
+                          +
+                        </button>
+                      </div>
                     </div>
-
-                    <button
-                      className="remove-btn"
-                      onClick={() =>
-                        removeItem(item.id)
-                      }
-                    >
-                      Remove
-                    </button>
                   </div>
+
                 </div>
               ))}
             </div>

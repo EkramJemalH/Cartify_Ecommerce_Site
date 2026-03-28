@@ -24,15 +24,16 @@
   gap: 2rem;
 }
 
-/* Single Item */
+/* Single Item (CARD) */
 .cart-item {
+  position: relative; /* for top-right button */
   display: flex;
   gap: 2rem;
   background: #fff;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  align-items: center;
+  align-items: stretch;
 }
 
 /* Product Image */
@@ -45,8 +46,11 @@
 /* Details */
 .cart-details {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Text */
 .cart-details h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
@@ -62,7 +66,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .quantity-controls button {
@@ -86,18 +89,26 @@
   font-weight: bold;
 }
 
-/* Remove Button */
+/* 🔥 Remove Button (TOP RIGHT) */
 .remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
   background: transparent;
-  border: none;
+  border: 2px solid red;
   color: red;
+  padding: 4px 8px;
+  border-radius: 6px;
+
   cursor: pointer;
   font-weight: 500;
   transition: 0.2s ease;
 }
 
 .remove-btn:hover {
-  text-decoration: underline;
+  background-color: red;
+  color: white;
 }
 
 /* Cart Summary */
@@ -138,6 +149,16 @@
   .cart-item {
     flex-direction: column;
     text-align: center;
+  }
+
+  .cart-details {
+    align-items: center;
+  }
+
+  .remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
   .cart-summary {
