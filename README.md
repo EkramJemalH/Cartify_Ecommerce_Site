@@ -1,16 +1,91 @@
-# React + Vite
+# Cartify - E-commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cartify is a modern, responsive e-commerce website built with React and Vite. It provides a seamless shopping experience with features like user authentication, product browsing, shopping cart, wishlist, and more.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Login and signup functionality for users.
+- **Product Catalog**: Browse products with categories and search.
+- **Shopping Cart**: Add, remove, and manage items in the cart.
+- **Wishlist**: Save favorite products for later.
+- **Responsive Design**: Optimized for desktop and mobile devices.
+- **Fast Performance**: Built with Vite for quick development and builds.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React, Vite
+- **Styling**: CSS
+- **State Management**: React Context (for Wishlist)
+- **Build Tool**: Vite
+- **Linting**: ESLint
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/cartify.git
+   cd cartify
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`.
+
+## Usage
+
+- **Home Page**: Browse featured products and popular items.
+- **Shop**: View all products with filtering options.
+- **Product Details**: Click on a product to view details and add to cart.
+- **Cart**: Manage your shopping cart.
+- **Wishlist**: Add products to your wishlist.
+- **Login/Signup**: Create an account or log in to access personalized features.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Nav.jsx          # Navigation bar
+│   ├── Footer.jsx       # Footer component
+│   ├── PopularProducts.jsx  # Popular products section
+│   └── ...
+├── pages/
+│   ├── Home.jsx         # Home page
+│   ├── Shop.jsx         # Shop page
+│   ├── Product.jsx      # Product details page
+│   ├── Cart.jsx         # Shopping cart
+│   ├── Wishlist.jsx     # Wishlist page
+│   ├── Login.jsx        # Login page
+│   ├── Signup.jsx       # Signup page
+│   └── ...
+├── context/
+│   ├── WishlistContext.jsx  # Wishlist state management
+│   └── ...
+├── assets/              # Static assets
+└── App.jsx              # Main app component
+```
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Make your changes and commit them.
+4. Push to your fork and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or support, please contact [your-email@example.com].
