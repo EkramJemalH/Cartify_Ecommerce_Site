@@ -1,199 +1,348 @@
+/* Home.css - Responsive */
 .main-content {
-  flex: 1;
+    flex: 1;
+    overflow-x: hidden;
 }
 
 .hero {
-  background-color: #D9D9D9;
-  height: 500px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 70px;
-  padding-top: 50px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: black;
-  width: 350px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.hero p {
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-}
-
-.hero button {
-  font-size: 16px;
-  font-weight: 400;
-  color: white;
-  width: 250px;
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  background-color: #812F2F;
+    background-color: #D9D9D9;
+    min-height: 500px;
+    padding: 50px 70px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .left-hero {
-  float: left;
-  width: 50%;
+    flex: 1;
+    min-width: 280px;
 }
 
 .right-hero {
-  float: right;
-  width: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: black;
+    max-width: 350px;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.shop-now {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    width: 250px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #812F2F;
+    transition: all 0.3s ease;
+}
+
+.shop-now:hover {
+    background-color: #a03d3d;
+    transform: translateY(-2px);
 }
 
 .hero-img {
-  width: 500px;
-  height: 500px;
-  float: right;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 30px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
 }
 
 .categories {
-  background-color: #F4F0F0;
-  margin-top: 0px;
-  padding-right: 0px;
-  overflow: hidden;
-}
-
-.category-img {
-  background-color: white;
-  width: 300px;
-  height: 250px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 70px;
-  padding-top: 50px;
-  text-align: center;
-  margin: 50px;
-  border-radius: 20px;
-}
-
-.categories-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: #F4F0F0;
+    padding: 40px 20px;
+    overflow: hidden;
 }
 
 .categories-header {
-  display: flex;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .categories-header h1 {
-  margin-left: auto;
-  margin-right: auto;
-  color: black;
+    color: black;
+    font-size: 32px;
+    margin: 0;
 }
 
 .categories-header a {
-  margin-left: auto;
-  padding-right: 10px;
-  text-decoration: none;
+    color: #812F2F;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.categories-header a:hover {
+    text-decoration: underline;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.category {
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.category-img {
+    background-color: white;
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .category h2 {
-  color: black;
-  text-align: center;
+    color: black;
+    font-size: 24px;
+    margin-top: 0;
 }
 
 .aboutUs {
-  background-color: #FFFFFF;
-  color: black;
-  overflow: hidden;
-  padding: 0px 100px 100px 100px;
+    background-color: #FFFFFF;
+    padding: 60px 100px;
+    text-align: center;
+}
+
+.aboutUs h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: black;
 }
 
 .aboutUs-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-  flex-wrap: wrap;
-  /* works on small screens */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .aboutUs-card {
-  width: 200px;
-  padding: 1rem;
-  border-radius: 8px;
-  color: rgba(0, 0, 0, 0.5);
-  font-weight: 600;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.aboutUs-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .aboutUs-card i {
-  color: #ff6f61;
-  /* icon color */
-  margin-bottom: 0.5rem;
+    color: #812F2F;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.aboutUs-card p {
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 .testimonials {
-  padding: 3rem 1rem;
-  text-align: center;
-  /* center the heading */
-  background-color: #EEE5E5;
-  height: 500px;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #EEE5E5;
 }
 
 .testimonials h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: black;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: black;
 }
 
 .testimonials-container {
-  display: flex;
-  justify-content: center;
-  /* center the row of cards */
-  gap: 1.5rem;
-  /* space between cards */
-  flex-wrap: wrap;
-  /* wrap on smaller screens */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .testimonial-card {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  width: 300px;
-  /* card width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: black;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial-card p:first-child {
-  font-style: italic;
-  margin-bottom: 1rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
 }
 
 .testimonial-card p strong {
-  font-weight: 600;
-  color: #333;
+    font-weight: 600;
+    color: #812F2F;
 }
 
-/* Optional hover effect */
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 40px;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+        max-width: 300px;
+    }
+    
+    .aboutUs {
+        padding: 50px 40px;
+    }
+    
+    .categories-header {
+        padding: 0 30px;
+    }
 }
 
-/* Responsive for mobile */
 @media (max-width: 768px) {
-  .testimonials-container {
-    flex-direction: column;
-    align-items: center;
-  }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .left-hero {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .hero h1 {
+        max-width: 100%;
+        font-size: 32px;
+    }
+    
+    .hero-img {
+        max-width: 80%;
+    }
+    
+    .categories-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .categories-header h1 {
+        font-size: 28px;
+    }
+    
+    .category-img {
+        max-width: 250px;
+        height: 200px;
+    }
+    
+    .aboutUs {
+        padding: 40px 20px;
+    }
+    
+    .aboutUs h1 {
+        font-size: 28px;
+    }
+    
+    .testimonials h1 {
+        font-size: 28px;
+    }
+    
+    .testimonial-card {
+        max-width: 90%;
+    }
+}
 
-  .testimonial-card {
-    width: 90%;
-    margin-bottom: 1rem;
-  }
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .shop-now {
+        width: 200px;
+        height: 45px;
+        font-size: 14px;
+    }
+    
+    .categories-header h1 {
+        font-size: 24px;
+    }
+    
+    .category h2 {
+        font-size: 20px;
+    }
+    
+    .category-img {
+        max-width: 200px;
+        height: 180px;
+    }
+    
+    .aboutUs h1 {
+        font-size: 24px;
+    }
+    
+    .aboutUs-card p {
+        font-size: 13px;
+    }
+    
+    .testimonials h1 {
+        font-size: 24px;
+    }
+    
+    .testimonial-card p {
+        font-size: 14px;
+    }
 }

@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Add useNavigate
 import "./Signup.css";
 
 function Signup() {
+  const navigate = useNavigate(); // Add this for redirecting
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState(""); // new state
-  const [error, setError] = useState(""); // for password mismatch
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,24 +18,37 @@ function Signup() {
       return;
     }
 
-    setError(""); // reset error if passwords match
+    setError("");
+
+    // Create user object to store in localStorage
+    const userData = {
+      name: username,
+      email: email,
+      avatar: "https://via.placeholder.com/100" // Default avatar, you can change this
+    };
+
+    // Save to localStorage
+    localStorage.setItem("user", JSON.stringify(userData));
+    
+    // Show success message
     alert(`Account created for: ${username}`);
-    // here you can also handle actual signup logic
+    
+    // Redirect to profile page
+    navigate("/profile");
   };
 
   const handleGoogleSignup = () => {
     alert("Google signup clicked!");
-    // integrate Google OAuth here if needed
+    // For Google signup, you would typically get user data from Google
+    // Then save similar data to localStorage
   };
 
   return (
     <div className="signup-container">
-      {/* Left side */}
       <div className="signup-left">
         <h1>Hello <br /> Welcome</h1>
       </div>
 
-      {/* Right side */}
       <div className="signup-right">
         <form className="signup-form" onSubmit={handleSubmit}>
           <h2>Sign Up</h2>
