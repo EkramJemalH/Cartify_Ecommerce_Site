@@ -19,6 +19,10 @@ Cartify is a modern, responsive e-commerce website built with React and Vite. It
 - **Build Tool**: Vite
 - **Linting**: ESLint
 
+## Design
+
+The design for Cartify was created in Figma. You can view the design file here: [Figma Design](https://www.figma.com/design/ZmcEdgamVaY1AO43eZPDPq/Cartify?node-id=0-1&t=xg3lRjRrruSRXBZl-1)
+
 ## Installation
 
 1. Clone the repository:
